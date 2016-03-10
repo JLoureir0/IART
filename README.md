@@ -20,6 +20,7 @@
  * Como é que definimos o custo associado à alocação de um determinado trabalhador (depende da linguagem e da especialização mas com que penalizações em números)?
  * Existem tarefas principais e secundárias?
  * As restrições mudam no decorrer da alocação? Se sim temos de ter em conta a disponibilidade dos trabalhadores.
+ * um trabalhador faz a tarefa ate ao fim e termina o seu ciclo de vida? ou pode realizar outra tarefa de seguida?
 
 #### Contributers ####
 Joel Carneiro
