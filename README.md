@@ -20,7 +20,10 @@
  * Como é que definimos o custo associado à alocação de um determinado trabalhador (depende da linguagem e da especialização mas com que penalizações em números)?
  * Existem tarefas principais e secundárias?
  * As restrições mudam no decorrer da alocação? Se sim temos de ter em conta a disponibilidade dos trabalhadores.
- * um trabalhador faz a tarefa ate ao fim e termina o seu ciclo de vida? ou pode realizar outra tarefa de seguida?
+ * Um trabalhador faz a tarefa ate ao fim e termina o seu ciclo de vida? Ou pode realizar outra tarefa de seguida?
+ * Existe tempo de resolução de cada tarefa? Ou sempre que um trabalhador é alocado a uma tarefa essa fica logo realizada?
+ * É possível alocar vários trabalhadores a uma tarefa? Se sim, que unidade se usa para saber se a tarefa termina. p.e. man-hours
+
 
 #### Contributers ####
 Joel Carneiro
