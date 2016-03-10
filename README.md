@@ -1,5 +1,5 @@
 #### Leitura de inputs ####
- * Usar o sqlite para guardar informação sobre a informação dos trabalhadores e tarefas. Deveram existir diversas bases de dados com a mesma estrutura mas com diferentes inserts.
+ * Usar o sqlite para guardar informação sobre a informação dos trabalhadores e tarefas. Deverão existir diversas bases de dados com a mesma estrutura mas com diferentes inserts.
 
 #### Objetivos ####
  * Alocar trabalhadores de modo a que as tarefas sejam todas realizadas e que o custo seja o minimo
