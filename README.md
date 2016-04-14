@@ -25,7 +25,6 @@
  * É possível alocar vários trabalhadores a uma tarefa? Se sim, que unidade se usa para saber se a tarefa termina. p.e. man-hours
 
 #### Apoio ####
- * https://www.edx.org/course/artificial-intelligence-uc-berkeleyx-cs188-1x
  * https://www.youtube.com/playlist?list=PL6MuV0DF6Auo_KF8FggvX-m1ZBZalXxFL
  * http://www.redblobgames.com/pathfinding/a-star/introduction.html
  * http://www.redblobgames.com/pathfinding/a-star/implementation.html
