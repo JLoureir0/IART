@@ -26,9 +26,10 @@
 
 #### Apoio ####
  * https://www.youtube.com/playlist?list=PL6MuV0DF6Auo_KF8FggvX-m1ZBZalXxFL
-
-
+ * http://www.redblobgames.com/pathfinding/a-star/introduction.html
+ * http://www.redblobgames.com/pathfinding/a-star/implementation.html
 
 #### Contributers ####
 Joel Carneiro
 Hugo Drumond
+João Loureiro
