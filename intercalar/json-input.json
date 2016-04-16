@@ -1,0 +1,41 @@
+{
+  "modules": [
+    {
+      "name": "module1",
+      "tasks" : [
+        {
+          "name": "task1",
+          "technology": "sockets"
+        },
+        {
+          "name": "task2",
+          "technology": "web-services"
+        }
+      ]
+    }
+  ],
+  "workers": [
+    {
+      "name": "Hugo",
+      "languages": [ "java", "cpp", "c" ],
+      "technologies": [ "sockets", "web-services"],
+      "years_of_experience": 3
+    },
+    {
+      "name": "João",
+      "languages": [ "java", "cpp", "c", "ruby", "scala", "python", "lua", "prolog" ],
+      "technologies": [ "sockets", "web-services", "databases", "algorithms"],
+      "years_of_experience": 3
+    },
+    {
+      "name": "Joel",
+      "languages": [ "java", "cpp", "c" ],
+      "technologies": [ "sockets", "web-services", "algorithms"],
+      "years_of_experience": 3
+    }
+  ]
+}
+
+
+
+

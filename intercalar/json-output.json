@@ -1,0 +1,18 @@
+{
+  "output": [
+    {
+      "module": "module_name",
+      "language": "language_name",
+      "tasks": [
+        {
+          "task": "task_name",
+          "worker": "worker_name"
+        },
+        {
+          "task": "task_name1",
+          "worker": "worker_name1"
+        }
+      ]
+    }
+  ]
+}
