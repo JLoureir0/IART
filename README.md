@@ -1,5 +1,5 @@
 #### Leitura de inputs ####
- * Usar o sqlite para guardar informação sobre a informação dos trabalhadores e tarefas. Deverão existir diversas bases de dados com a mesma estrutura mas com diferentes inserts.
+ * Json
 
 #### Objetivos ####
  * Alocar trabalhadores de modo a que as tarefas sejam todas realizadas e que o custo seja o minimo
@@ -24,7 +24,12 @@
  * Existe tempo de resolução de cada tarefa? Ou sempre que um trabalhador é alocado a uma tarefa essa fica logo realizada?
  * É possível alocar vários trabalhadores a uma tarefa? Se sim, que unidade se usa para saber se a tarefa termina. p.e. man-hours
 
+#### Apoio ####
+ * https://www.youtube.com/playlist?list=PL6MuV0DF6Auo_KF8FggvX-m1ZBZalXxFL
+ * http://www.redblobgames.com/pathfinding/a-star/introduction.html
+ * http://www.redblobgames.com/pathfinding/a-star/implementation.html
 
 #### Contributers ####
 Joel Carneiro
 Hugo Drumond
+João Loureiro
