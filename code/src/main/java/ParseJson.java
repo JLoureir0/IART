@@ -1,10 +1,9 @@
 import java.io.FileReader;
+import java.util.Iterator;
 import java.util.PriorityQueue;
 import java.util.TreeSet;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+import com.google.gson.*;
 
 public class ParseJson {
 
@@ -12,37 +11,39 @@ public class ParseJson {
 
     public void parse(String filepath) {
 
-        JSONParser jsonParser = new JSONParser();
+        JsonElement jsonParser = new JsonParser().parse(filepath);
+        JsonObject global_json_object = jsonParser.getAsJsonObject();
 
         try {
 
-            JSONObject global_json_object = (JSONObject) jsonParser.parse(new FileReader(filepath));
+            JsonArray programmers_json_array = global_json_object.getAsJsonArray("programmers");
 
-            JSONArray programmers_json_array = (JSONArray) global_json_object.get("programmers");
-
-            for (Object programmer_object : programmers_json_array) {
-                JSONObject programmer_json_object = (JSONObject) programmer_object;
+            Iterator it = programmers_json_array.iterator();
+            while (it.hasNext()) {
+                JsonObject programmer_json_object = (JsonObject) it.next();
                 // Get name
-                String name = (String) programmer_json_object.get("name");
+                String name = programmer_json_object.get("name").getAsString();
 
                 // Get technologies
-                JSONArray technologies_json_array = (JSONArray) programmer_json_object.get("technologies");
+                JsonArray technologies_json_array = programmer_json_object.getAsJsonArray("technologies");
+                it = technologies_json_array.iterator();
                 TreeSet<Technology> technologies = new TreeSet<Technology>();
-                for (Object technology_object : technologies_json_array) {
-                    JSONObject technology_json_object = (JSONObject) technology_object;
-                    technologies.add(new Technology((String)technology_json_object.get("name")));
+                while (it.hasNext()) {
+                    JsonObject technology_json_object = (JsonObject) it.next();
+                    technologies.add(new Technology(technology_json_object.get("name").getAsString()));
                 }
 
                 // Get Languages
-                JSONArray languages_json_array = (JSONArray) programmer_json_object.get("languages");
+                JsonArray languages_json_array = (JsonArray) programmer_json_object.get("languages");
+                it = languages_json_array.iterator();
                 TreeSet<Language> languages = new TreeSet<Language>();
-                for (Object language_object : languages_json_array) {
-                    JSONObject language_json_object = (JSONObject) language_object;
-                    languages.add(new Language((String)language_json_object.get("name")));
+                while (it.hasNext()) {
+                    JsonObject language_json_object = (JsonObject) it.next();
+                    languages.add(new Language(language_json_object.get("name").getAsString()));
                 }
 
                 // Get Experience
-                int experience = (int) programmer_json_object.get("experience");
+                int experience = programmer_json_object.get("experience").getAsInt();
 
                 this.programmers.add(new Programmer(name, languages, technologies, experience));
             }
