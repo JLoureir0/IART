@@ -110,7 +110,7 @@
 
   ],
 
-  "workers": [
+  "programmers": [
     {
       "name": "Hugo",
       "languages": [ "java", "cpp", "c" ],
