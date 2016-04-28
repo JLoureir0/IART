@@ -8,7 +8,7 @@ repositories {
 }
 
 dependencies {
-    compile "org.json:json:20160212"
+    compile "com.googlecode.json-simple:json-simple:1.1.1"
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
