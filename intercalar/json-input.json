@@ -2,7 +2,9 @@
   "modules": [
     {
       "name": "module1",
+
       "tasks" : [
+
         {
           "name": "task1",
           "technology": "sockets"
@@ -11,9 +13,103 @@
           "name": "task2",
           "technology": "web-services"
         }
+
+        {
+          "name": "task3",
+          "technology": "databases"
+        }
+
+        {
+          "name": "task4",
+          "technology": "web-services"
+        }
+        {
+          "name": "task5",
+          "technology": "algorithms"
+        }
       ]
     }
+
+
+  {
+      "name": "module2",
+
+      "tasks" : [
+
+        {
+          "name": "task1",
+          "technology": "databases"
+        },
+        {
+          "name": "task2",
+          "technology": "web-services"
+        }
+
+        {
+          "name": "task3",
+          "technology": "algorithms"
+        }
+
+        {
+          "name": "task4",
+          "technology": "sockets"
+        }
+        {
+          "name": "task5",
+          "technology": "algorithms"
+        }
+      ]
+    }
+
+    {
+      "name": "module3",
+
+      "tasks" : [
+
+        {
+          "name": "task1",
+          "technology": "algorithms"
+        },
+        {
+          "name": "task2",
+          "technology": "databases"
+        }
+
+        {
+          "name": "task3",
+          "technology": "algorithms"
+        }
+
+        {
+          "name": "task4",
+          "technology": "databases"
+        }
+        {
+          "name": "task5",
+          "technology": "sockets"
+        }
+      ]
+    }
+
+{
+
+      "name": "module4",
+
+      "tasks" : [
+
+        {
+          "name": "task1",
+          "technology": "algorithms"
+        },
+        {
+          "name": "task2",
+          "technology": "databases"
+        }
+      ]
+    }
+
   ],
+
   "workers": [
     {
       "name": "Hugo",
@@ -21,18 +117,84 @@
       "technologies": [ "sockets", "web-services"],
       "years_of_experience": 3
     },
+
     {
-      "name": "João",
+      "name": "Joao",
       "languages": [ "java", "cpp", "c", "ruby", "scala", "python", "lua", "prolog" ],
       "technologies": [ "sockets", "web-services", "databases", "algorithms"],
       "years_of_experience": 3
     },
+
     {
       "name": "Joel",
       "languages": [ "java", "cpp", "c" ],
       "technologies": [ "sockets", "web-services", "algorithms"],
       "years_of_experience": 3
     }
+
+{
+      "name": "Vasco",
+      "languages": ["cpp", "c" ],
+      "technologies": [ "sockets", "web-services", "algorithms"],
+      "years_of_experience": 2
+    },
+
+    {
+      "name": "Carlos",
+      "languages": [ "java", "prolog" ],
+      "technologies": [ "sockets", "algorithms"],
+      "years_of_experience": 1
+    },
+
+    {
+      "name": "Rui",
+      "languages": [ "cpp", "c" ],
+      "technologies": [ "web-services", "algorithms"],
+      "years_of_experience": 5
+    }
+
+{
+      "name": "Marco",
+      "languages": [ "c" ],
+      "technologies": [ "sockets"],
+      "years_of_experience": 4
+    },
+
+    {
+      "name": "Luis",
+      "languages": [ "java", "ruby", "scala", "prolog" ],
+      "technologies": [ "databases", "algorithms"],
+      "years_of_experience": 4
+    },
+
+    {
+      "name": "Daniel",
+      "languages": [ "java", "scheme"],
+      "technologies": [ "sockets", "web-services", "algorithms"],
+      "years_of_experience": 2
+    }
+
+    {
+      "name": "Mario",
+      "languages": [ "ruby", "prolog" ],
+      "technologies": [ "sockets", "web-services"],
+      "years_of_experience": 1
+    },
+
+    {
+      "name": "Joaquim",
+      "languages": [ "java", "python", "lua", "prolog" ],
+      "technologies": ["web-services", "databases", "algorithms"],
+      "years_of_experience": 3
+    },
+
+    {
+      "name": "Manuel",
+      "languages": [ "java", "cpp", "c" ],
+      "technologies": [ "sockets","algorithms"],
+      "years_of_experience": 2
+    }
+
   ]
 }
 
