@@ -15,7 +15,8 @@ public class ModuleDeserializer implements JsonDeserializer<Module> {
         String name = jsonObject.get("name").getAsString();
 
         // Get Tasks
-        Type ArrayListTaskType = new TypeToken<ArrayList<Task>>() {}.getType();
+        Type ArrayListTaskType = new TypeToken<ArrayList<Task>>() {
+        }.getType();
         ArrayList<Task> tasks = context.deserialize(jsonObject.get("tasks"), ArrayListTaskType);
 
         return new Module(name, tasks);

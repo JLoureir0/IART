@@ -26,10 +26,12 @@ public class Parser {
         JsonParser jsonParser = new JsonParser();
         JsonObject json_global_object = jsonParser.parse(jsonReader).getAsJsonObject();
 
-        Type PriorityQueueProgrammerType = new TypeToken<PriorityQueue<Programmer>>() {}.getType();
+        Type PriorityQueueProgrammerType = new TypeToken<PriorityQueue<Programmer>>() {
+        }.getType();
         PriorityQueue<Programmer> programmers = gson.fromJson(json_global_object.get("programmers"), PriorityQueueProgrammerType);
 
-        Type ArrayListType = new TypeToken<ArrayList<Module>>(){}.getType();
+        Type ArrayListType = new TypeToken<ArrayList<Module>>() {
+        }.getType();
         ArrayList<Module> modules = gson.fromJson(json_global_object.get("modules"), ArrayListType);
 
         return new ParsedData(programmers, modules);
