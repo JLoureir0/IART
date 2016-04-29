@@ -55,10 +55,10 @@ public class Programmer implements Comparable<Programmer> {
         Iterator iterator = this.languages.iterator();
         if (iterator.hasNext()) {
             Language language = (Language) iterator.next();
-            languages_str = language.getName();
+            languages_str = language.toString();
             while (iterator.hasNext()) {
                 language = (Language) iterator.next();
-                languages_str += "-" + language.getName();
+                languages_str += "-" + language.toString();
             }
         }
 
@@ -66,10 +66,10 @@ public class Programmer implements Comparable<Programmer> {
         iterator = this.technologies.iterator();
         if (iterator.hasNext()) {
             Technology technology = (Technology) iterator.next();
-            technologies_str = technology.getName();
+            technologies_str = technology.toString();
             while (iterator.hasNext()) {
                 technology = (Technology) iterator.next();
-                languages_str += "-" + technology.getName();
+                languages_str += "-" + technology.toString();
             }
         }
 
