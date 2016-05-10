@@ -18,4 +18,15 @@ public class Language implements Comparable<Language> {
     public String toString() {
         return name;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Language otherLanguage = (Language) obj;
+        return this.getName().equals(otherLanguage.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.getName().hashCode();
+    }
 }

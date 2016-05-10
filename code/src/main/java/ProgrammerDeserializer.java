@@ -1,7 +1,7 @@
 import com.google.gson.*;
 
 import java.lang.reflect.Type;
-import java.util.TreeSet;
+import java.util.HashSet;
 
 public class ProgrammerDeserializer implements JsonDeserializer<Programmer> {
 
@@ -15,14 +15,14 @@ public class ProgrammerDeserializer implements JsonDeserializer<Programmer> {
 
         // Get technologies
         JsonArray json_technologies_array = jsonObject.get("technologies").getAsJsonArray();
-        TreeSet<Technology> technologies = new TreeSet<>();
+        HashSet<Technology> technologies = new HashSet<>();
         for (JsonElement json_technology_element : json_technologies_array) {
             technologies.add(new Technology(json_technology_element.getAsString()));
         }
 
         // Get Languages
         JsonArray json_languages_array = jsonObject.get("languages").getAsJsonArray();
-        TreeSet<Language> languages = new TreeSet<>();
+        HashSet<Language> languages = new HashSet<>();
         for (JsonElement json_language_element : json_languages_array) {
             languages.add(new Language(json_language_element.getAsString()));
         }

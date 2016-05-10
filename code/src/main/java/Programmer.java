@@ -1,14 +1,14 @@
 import java.util.Iterator;
-import java.util.TreeSet;
+import java.util.HashSet;
 
 public class Programmer implements Comparable<Programmer> {
     final private String name;
-    final private TreeSet<Language> languages;
-    final private TreeSet<Technology> technologies;
+    final private HashSet<Language> languages;
+    final private HashSet<Technology> technologies;
     final private int experience;
     final private double cost;
 
-    public Programmer(String name, TreeSet<Language> languages, TreeSet<Technology> technologies, int experience) {
+    public Programmer(String name, HashSet<Language> languages, HashSet<Technology> technologies, int experience) {
         this.name = name;
         this.languages = languages;
         this.technologies = technologies;
@@ -28,11 +28,11 @@ public class Programmer implements Comparable<Programmer> {
         return this.cost;
     }
 
-    public TreeSet<Language> getLanguages() {
+    public HashSet<Language> getLanguages() {
         return languages;
     }
 
-    public TreeSet<Technology> getTechnologies() {
+    public HashSet<Technology> getTechnologies() {
         return technologies;
     }
 

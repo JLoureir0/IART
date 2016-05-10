@@ -18,4 +18,15 @@ public class Technology implements Comparable<Technology> {
     public String toString() {
         return name;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Technology otherTechnology = (Technology) obj;
+        return this.getName().equals(otherTechnology.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.getName().hashCode();
+    }
 }
