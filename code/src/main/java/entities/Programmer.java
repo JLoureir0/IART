@@ -1,5 +1,7 @@
-import java.util.Iterator;
+package entities;
+
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class Programmer implements Comparable<Programmer> {
     final private String name;

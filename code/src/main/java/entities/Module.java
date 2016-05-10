@@ -1,3 +1,5 @@
+package entities;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -6,7 +8,7 @@ public class Module {
     final private ArrayList<Task> tasks;
     final private String name;
 
-    Module(String name_, ArrayList<Task> tasks_) {
+    public Module(String name_, ArrayList<Task> tasks_) {
         this.name = name_;
         this.tasks = tasks_;
     }

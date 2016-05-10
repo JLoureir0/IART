@@ -1,5 +1,9 @@
+package parser.deserializers;
+
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
+import entities.Module;
+import entities.Task;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

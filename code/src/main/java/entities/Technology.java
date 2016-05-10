@@ -1,3 +1,5 @@
+package entities;
+
 public class Technology implements Comparable<Technology> {
     final private String name;
 

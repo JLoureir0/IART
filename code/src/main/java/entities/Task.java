@@ -1,8 +1,10 @@
+package entities;
+
 public class Task {
     final public String name;
     final public String technology;
 
-    Task(String name_, String technology_) {
+    public Task(String name_, String technology_) {
         this.name = name_;
         this.technology = technology_;
     }

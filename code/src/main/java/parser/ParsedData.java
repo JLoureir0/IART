@@ -1,3 +1,8 @@
+package parser;
+
+import entities.Module;
+import entities.Programmer;
+
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 

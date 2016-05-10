@@ -1,3 +1,5 @@
+package entities;
+
 public class Language implements Comparable<Language> {
     final private String name;
 

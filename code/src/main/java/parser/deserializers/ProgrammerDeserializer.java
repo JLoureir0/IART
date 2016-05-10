@@ -1,4 +1,9 @@
+package parser.deserializers;
+
 import com.google.gson.*;
+import entities.Language;
+import entities.Programmer;
+import entities.Technology;
 
 import java.lang.reflect.Type;
 import java.util.HashSet;

@@ -1,3 +1,7 @@
+import entities.Module;
+import parser.ParsedData;
+import parser.Parser;
+
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
@@ -20,7 +24,7 @@ public class Main {
             return;
         }
 
-        PriorityQueue<Programmer> programmers = data.getProgrammers();
+        PriorityQueue<entities.Programmer> programmers = data.getProgrammers();
         while (programmers.size() != 0) {
             System.out.println(programmers.poll());
         }

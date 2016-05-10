@@ -1,9 +1,17 @@
+package parser;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
+import entities.Module;
+import entities.Programmer;
+import entities.Task;
+import parser.deserializers.ModuleDeserializer;
+import parser.deserializers.ProgrammerDeserializer;
+import parser.deserializers.TaskDeserializer;
 
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
