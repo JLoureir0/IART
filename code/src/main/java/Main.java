@@ -1,9 +1,12 @@
+import algorithms.AStar;
 import entities.Module;
 import parser.ParsedData;
 import parser.Parser;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
+
+import algorithms.AStar;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,5 +34,7 @@ public class Main {
 
         ArrayList<Module> modules = data.getModules();
         modules.forEach((module -> System.out.println(module)));
+
+        AStar astar = new AStar(data);
     }
 }
