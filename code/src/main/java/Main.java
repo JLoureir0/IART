@@ -24,8 +24,7 @@ public class Main {
             return;
         }
 
-        PriorityQueue<Programmer> programmers = parsedData.getProgrammers();
-
+        PriorityQueue<Programmer> programmers = parsedData.getProgrammersCopy();
         Programmer programmer;
         while ((programmer = programmers.poll()) != null) {
             System.out.println(programmer);
