@@ -1,12 +1,9 @@
 import algorithms.AStar;
-import entities.Module;
 import parser.ParsedData;
 import parser.Parser;
+import entities.Programmer;
 
-import java.util.ArrayList;
 import java.util.PriorityQueue;
-
-import algorithms.AStar;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,23 +15,25 @@ public class Main {
         String db_filepath = args[0];
 
         Parser parser = new Parser();
-        ParsedData data;
+        ParsedData parsedData;
         try {
             System.out.println("Parsing the json database file.");
-            data = parser.parse(db_filepath);
+            parsedData = parser.parse(db_filepath);
         } catch (Exception e) {
             e.printStackTrace();
             return;
         }
 
-        PriorityQueue<entities.Programmer> programmers = data.getProgrammers();
-        while (programmers.size() != 0) {
-            System.out.println(programmers.poll());
+        PriorityQueue<Programmer> programmers = parsedData.getProgrammers();
+
+        Programmer programmer;
+        while ((programmer = programmers.poll()) != null) {
+            System.out.println(programmer);
         }
 
-        ArrayList<Module> modules = data.getModules();
-        modules.forEach((module -> System.out.println(module)));
+        parsedData.getModules().forEach((module -> System.out.println(module)));
 
-        AStar astar = new AStar(data);
+        AStar astar = new AStar(parsedData);
+        astar.compute().forEach((subResult) -> System.out.println(subResult));
     }
 }

@@ -31,4 +31,9 @@ public class Language implements Comparable<Language> {
     public int hashCode() {
         return this.getName().hashCode();
     }
+
+    // Language is immutable, no setters, no need for new
+    protected Language copy() {
+        return this;
+    }
 }

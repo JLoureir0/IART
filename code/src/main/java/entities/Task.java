@@ -21,4 +21,9 @@ public class Task {
     public String toString() {
         return this.name + "," + this.technology;
     }
+
+    // Task is immutable, no setters, no need for new
+    protected Task copy() {
+        return this;
+    }
 }

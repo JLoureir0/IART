@@ -35,4 +35,11 @@ public class Module {
         }
         return this.name + "\t" + tasks_str;
     }
+
+    public Module copy() {
+        ArrayList<Task> tasks_copy = new ArrayList<>(this.tasks.size());
+        this.tasks.forEach(task -> tasks_copy.add(task.copy()));
+
+        return new Module(this.name, tasks_copy);
+    }
 }

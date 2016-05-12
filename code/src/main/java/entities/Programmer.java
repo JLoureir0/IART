@@ -82,4 +82,27 @@ public class Programmer implements Comparable<Programmer> {
     public int compareTo(Programmer otherProgrammer) {
         return Double.compare(this.getCost(), otherProgrammer.getCost());
     }
+
+    public Programmer copy() {
+
+        int languages_size = this.languages.size();
+        HashSet<Language> languages_copy;
+        if (languages_size != 0) {
+            languages_copy = new HashSet<>(languages_size);
+            this.languages.forEach(language -> languages_copy.add(language.copy()));
+        } else {
+            languages_copy = new HashSet<>();
+        }
+
+        int technologies_size = this.technologies.size();
+        HashSet<Technology> technologies_copy;
+        if (technologies_size != 0) {
+            technologies_copy = new HashSet<>(technologies_size);
+            this.technologies.forEach(technology -> technologies_copy.add(technology.copy()));
+        } else {
+            technologies_copy = new HashSet<>();
+        }
+
+        return new Programmer(this.name, languages_copy, technologies_copy, this.experience);
+    }
 }

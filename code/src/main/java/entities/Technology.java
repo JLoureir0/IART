@@ -31,4 +31,9 @@ public class Technology implements Comparable<Technology> {
     public int hashCode() {
         return this.getName().hashCode();
     }
+
+    // Technology is immutable, no setters, no need for new
+    protected Technology copy() {
+        return this;
+    }
 }
