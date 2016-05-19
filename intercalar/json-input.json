@@ -190,7 +190,7 @@
 
     {
       "name": "Manuel",
-      "languages": [ "java", "cpp", "c" ],programmers
+      "languages": [ "java", "cpp", "c" ],
       "technologies": [ "sockets","algorithms"],
       "experience": 2
     }

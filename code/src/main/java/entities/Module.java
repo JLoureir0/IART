@@ -8,19 +8,36 @@ public class Module {
     final private ArrayList<Task> tasks;
     final private String name;
 
+    /**
+     * construtor da class module
+     * @param name_
+     * @param tasks_
+     */
     public Module(String name_, ArrayList<Task> tasks_) {
         this.name = name_;
         this.tasks = tasks_;
     }
 
+    /**
+     * metodo usado para obter o nome do modulo
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * array usado para obter as tasks
+     * @return tasks
+     */
     public ArrayList<Task> getTasks() {
         return tasks;
     }
 
+    /**
+     * metodo para converter as tasks em string
+     * @return
+     */
     @Override
     public String toString() {
         String tasks_str = null;
@@ -36,6 +53,10 @@ public class Module {
         return this.name + "\t" + tasks_str;
     }
 
+    /**
+     * obtem o nome do modulo e as suas tasks
+     * @return moduleName, tasks
+     */
     public Module copy() {
         ArrayList<Task> tasks_copy = new ArrayList<>(this.tasks.size());
         this.tasks.forEach(task -> tasks_copy.add(task.copy()));
