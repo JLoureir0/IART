@@ -1,4 +1,5 @@
 import algorithms.AStar;
+import entities.Module;
 import parser.ParsedData;
 import parser.Parser;
 import entities.Programmer;
@@ -24,15 +25,18 @@ public class Main {
             return;
         }
 
-        PriorityQueue<Programmer> programmers = parsedData.getProgrammersCopy();
+       /* PriorityQueue<Programmer> programmers = parsedData.getProgrammersCopy();
         Programmer programmer;
         while ((programmer = programmers.poll()) != null) {
             System.out.println(programmer);
         }
 
         parsedData.getModules().forEach((module -> System.out.println(module)));
-
+*/
         AStar astar = new AStar(parsedData);
+
+
         astar.compute().forEach((subResult) -> System.out.println(subResult));
+        System.out.println();
     }
 }
