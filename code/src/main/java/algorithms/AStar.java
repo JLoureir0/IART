@@ -79,11 +79,10 @@ public class AStar {
         }
         return moduleIndex;
     }
-    public SubResult printProgrammers(Task task){
+    public LinkedList<SubResult> printProgrammers(Task task){
 
+        return result;
     }
-
-
 
     public LinkedList<SubResult> compute() {
         this.result.clear();
@@ -127,34 +126,42 @@ public class AStar {
             if (current.equals(end)) {
                 System.out.println("Goal Reached");
                 printProgrammers(current);
-                this.result = printProgrammers;
+
             }
 
             closedList.add(openList.poll());
 
             while ((programmer = programmers.poll()) != null) {
 
-                if (programmer.knowsTechnology(start.getTechnology())) {
-                    cost += programmers.poll().getCost(); //programador com o menor custo
-                    modulos.get(getModule(current)).setModuleLanguage(programmer.getLanguages().iterator().next().toString()); // colocar linguagem no modulo da task current
-                    break;
-                } else {
+                //confirmar a linguagem do modulo
+                if (modulos.get(getModule(current)).getModuleLanguage() == "") {
+                    if (programmer.knowsTechnology(start.getTechnology())) {//confirma se o programmer sabe a tecnologia da task
+                        cost += programmers.poll().getCost(); //programador com o menor custo
+                        modulos.get(getModule(current)).setModuleLanguage(programmer.getLanguages().iterator().next().toString()); // colocar linguagem no modulo da task current
+                        break;
+                    } else {
 
+                        if (programmer.knowsTechnology(start.getTechnology()) && programmer.knowsLanguage(modulos.get(getModule(current)).getModuleLanguage())) {
+                            cost += programmers.poll().getCost(); //programador com o menor custo
+                            break;
+                        }
+                        else{
+                            System.out.println("No programmer knows the language and the technology required by the task");
+                        }
+                    }
                 }
+                Task neighbor = modules.get(indexMod).getTasks().get(getNeighborTask(indexMod, getTaskIndex(indexMod, current)));
+                double hScore = gVals.get(current);
+
+                if (closedList.contains(neighbor))
+                    if (gVals.get(neighbor) == null)
+                        gVals.put(neighbor, hScore);
+
+                if (!openList.contains(neighbor))
+                    openList.add(neighbor);
+
 
             }
-            Task neighbor = modules.get(indexMod).getTasks().get(getNeighborTask(indexMod, getTaskIndex(indexMod, current)));
-            double hScore = gVals.get(current);
-
-            if (closedList.contains(neighbor))
-                if (gVals.get(neighbor) == null)
-                    gVals.put(neighbor, hScore);
-
-            if (!openList.contains(neighbor))
-                openList.add(neighbor);
-
-
-
         }
         return result;
     }

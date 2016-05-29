@@ -79,7 +79,7 @@ public class Programmer implements Comparable<Programmer> {
      * @param language
      * @return boolean
      */
-    public boolean knowsLanguage(Language language) {
+    public boolean knowsLanguage(String language) {
         return this.languages.contains(language);
     }
 
