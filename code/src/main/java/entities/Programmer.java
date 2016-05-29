@@ -1,5 +1,6 @@
 package entities;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -30,7 +31,7 @@ public class Programmer implements Comparable<Programmer> {
      * @return custo
      */
     private double CalculateCost() {
-        return this.languages.size() + this.technologies.size() * 0.75 + this.experience * 0.25;
+        return this.languages.size() + (this.technologies.size() * 0.75) + (this.experience * 0.25);
     }
 
     /**
@@ -87,8 +88,8 @@ public class Programmer implements Comparable<Programmer> {
      * @param technology
      * @return boolean
      */
-    public boolean knowsTechnology(Technology technology) {
-        return this.technologies.contains(technology);
+    public boolean knowsTechnology(String technology) {
+        return this.technologies.equals(technology);
     }
 
     /**

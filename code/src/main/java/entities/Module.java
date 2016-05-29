@@ -7,6 +7,7 @@ public class Module {
 
     final private ArrayList<Task> tasks;
     final private String name;
+    private String language;
 
     /**
      * construtor da class module
@@ -16,6 +17,7 @@ public class Module {
     public Module(String name_, ArrayList<Task> tasks_) {
         this.name = name_;
         this.tasks = tasks_;
+        language = "";
     }
 
     /**
@@ -30,9 +32,11 @@ public class Module {
      * array usado para obter as tasks
      * @return tasks
      */
-    public ArrayList<Task> getTasks() {
-        return tasks;
-    }
+    public ArrayList<Task> getTasks() { return tasks; }
+
+    public void setModuleLanguage(String lang) {language = lang;}
+
+    public String getModuleLanguage() {return language;}
 
     /**
      * metodo para converter as tasks em string

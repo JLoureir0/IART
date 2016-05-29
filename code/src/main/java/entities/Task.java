@@ -30,6 +30,7 @@ public class Task {
         return technology;
     }
 
+
     /**
      * colocar numa string de forma a aparecer na consola como pretendido
      * @return nameTask, technologies
