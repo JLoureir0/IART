@@ -138,15 +138,17 @@ public class AStar {
                     if (programmer.knowsTechnology(start.getTechnology())) {//confirma se o programmer sabe a tecnologia da task
                         cost += programmers.poll().getCost(); //programador com o menor custo
                         modulos.get(getModule(current)).setModuleLanguage(programmer.getLanguages().iterator().next().toString()); // colocar linguagem no modulo da task current
+                        gVals.put(current, cost);
                         break;
                     } else {
 
                         if (programmer.knowsTechnology(start.getTechnology()) && programmer.knowsLanguage(modulos.get(getModule(current)).getModuleLanguage())) {
                             cost += programmers.poll().getCost(); //programador com o menor custo
+                            gVals.put(current,cost);
                             break;
                         }
                         else{
-                            System.out.println("No programmer knows the language and the technology required by the task");
+                            System.out.println(programmer.getName() + "don't know the language and the technology required by the task");
                         }
                     }
                 }

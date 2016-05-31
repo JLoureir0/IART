@@ -2,6 +2,7 @@ group 'IART1516'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'idea'
 
 repositories {
     mavenCentral()
@@ -13,6 +14,7 @@ dependencies {
 }
 
 task run(type: JavaExec) {
+    standardInput = System.in
     main = 'Main'
     classpath = sourceSets.main.runtimeClasspath
     if(project.hasProperty('args')) {
